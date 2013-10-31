@@ -7,7 +7,6 @@ Crucible is a simple, Laravel powered web app for sharing links around your orga
 * Simple (non validated) authentication using [Sentry](http://docs.cartalyst.com/sentry-2).
 * Post links once logged in.
 * User images are pulled from Gravatar.
-*
 
 ## Roadmap
 * Tagging posts
