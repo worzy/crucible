@@ -1,0 +1,12 @@
+Post posts; hm Comment
+    timestamps
+    domain string 255
+    url string 255
+    title string 255
+    content text
+    user_id integer
+
+Comment comments; ho Post
+    timestamps
+    content text
+    user_id integer

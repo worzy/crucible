@@ -1,0 +1,100 @@
+/*
+ * Hoisin sauce
+ * CSS Framework boilerplate
+ * Create your own grids, plugin anything
+ * Version: 0.9
+ *
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|PT+Sans:400,700);
+
+
+@import "vars";
+@import "mixins";
+
+// Only styles common for all screen sizes
+html, body {
+	color: $text;
+	font-family: $body_font;
+	background: $background;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $title_font;
+}
+
+.sub-text {
+	color: $sub_text;
+	font-size: 12px;
+}
+
+.header {
+	background-color: $brand;
+	.logo {
+		width: 200px;
+		float: left;
+	}
+	h1 {
+		color: white;
+		font-size: 24px;
+		font-weight: normal;
+	}
+	.main-nav {
+		float: right;
+		font-family: $title_font;
+		ul {
+			list-style: none;
+			li {
+				float: left;
+				margin-left: 10px;
+				a {
+					background: none repeat scroll 0 0 #232846;
+				    border-radius: 10px 10px 10px 10px;
+				    float: left;
+				    padding: 7px 10px;
+				    color: #dde0f0;
+				    text-decoration: none;
+				}   
+			}
+		}
+	}
+}
+
+.main-content {
+	background: $white;
+	padding: 10px;
+}
+
+.post {
+	padding: 10px;
+	.left {
+		float: left;
+    	padding: 0 15px 0 0;
+	}
+	.right {
+		float: left;
+	}
+	.image {
+		@include radius(35px);
+	}
+	h2 {
+		margin: 0;
+		font-size: 20px;
+	}
+	a {
+		text-decoration: none;
+		color: $text;
+	}
+	.domain {
+		font-family: $title_font;
+		font-size: normal;
+		color: #616161;
+		font-size: 14px;
+	}
+	p {
+		margin: 0;
+	}
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Crucible</title>
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+        <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css" media="all and (min-width: 120px)">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+                <header class="col8 pre2 suf2">
+                        <a class="logo" href="/"><h1>Crucible</h1></a>
+
+                        <nav class="main-nav">
+                            @if(!Sentry::check())
+                            <ul>
+                                <li><a href="/register">Sign up</a></li>
+                                <li><a href="/login">Log in</a></li>
+                            </ul>
+                            @else
+                            <ul>
+                                <li><a href="/post/create">Add</a></li>
+                                <li><a href="/logout">Log out</a></li>
+                            </ul>
+                            @endif
+                        </nav>
+                </header>
+                <div class="clear"></div>
+        </div>
+    </div>
+        <div class="container">
+                <div class="main-content col8 pre2 suf2">
+                         @yield('content')
+                </div>
+                <div class="clear"></div>
+        </div>
+        <div class="container">
+
+        </div>
+</body>
+</html>
