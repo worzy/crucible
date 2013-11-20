@@ -19,7 +19,7 @@ class PostController extends BaseController {
 	public function index()
 	{
 		$posts = $this->post->with(array('user','tags'))->orderBy('created_at', 'desc')->get();
-		
+
 		$gravatar = App::make('simplegravatar');
 
 		foreach($posts as $post)
@@ -78,7 +78,7 @@ class PostController extends BaseController {
 			if(!$tag)
 			{
 				$tag = new Tag();
-				$tag->name = $row;
+				$tag->name = $tag;
 				$tag->save();
 			}
 
