@@ -1,9 +1,12 @@
 @section('content')
 {{ Form::open() }}
-<label for="email">Email</label> <input type="email" name="email" placeholder="Enter your email">
-<label for="first_name">First name</label> <input type="text" name="first_name" placeholder="Please enter your first name">
-<label for="last_name">Last name</label> <input type="text" name="last_name" placeholder="Please enter your last name">
-<label for="password">Password</label> <input type="password" name="password" placeholder="Enter your password">
-<input type="submit" value="Submit">
+<div class="col6">
+	<fieldset>
+		<label for="name">Name</label> <input type="text" name="first_name" placeholder="John Smith?">
+		<label for="email">Email</label> <input type="email" name="email" placeholder="We can pull your Gravatar using this.">
+		<label for="password">Password</label> <input type="password" name="password" placeholder="Is it a secret? Is it safe?">
+		<input class="btn" type="submit" value="Sign up">
+	</fieldset>
+</div>
 {{ Form::close() }}
 @stop

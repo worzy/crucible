@@ -6,8 +6,7 @@
 	"require": {
 		"laravel/framework": "4.0.*",
 		"cartalyst/sentry": "2.0.*",
-		"euantor/simple-gravatar": "dev-master",
-		"raahul/larryfour": "dev-master"
+		"euantor/simple-gravatar": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

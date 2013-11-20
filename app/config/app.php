@@ -118,7 +118,7 @@ return array(
 		// Crucible
 		'Cartalyst\Sentry\SentryServiceProvider',
 		'Euantor\SimpleGravatar\SimpleGravatarServiceProvider',
-		'Raahul\LarryFour\LarryFourServiceProvider',
+		//'Raahul\LarryFour\LarryFourServiceProvider',
 
 	),
 

@@ -48,10 +48,20 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
   background: white;
-  padding: 10px; }
+  padding: 10px;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
 
 .post {
-  padding: 10px; }
+  padding: 10px;
+  box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box; }
   .post .left {
     float: left;
     padding: 0 15px 0 0; }
@@ -75,3 +85,44 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 14px; }
   .post p {
     margin: 0; }
+
+fieldset {
+  border: 0 none;
+  margin: 0;
+  padding: 0; }
+
+label {
+  display: block;
+  margin-bottom: 5px; }
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  border: solid 1px #bfbebe;
+  border-radius: 5px;
+  padding: 7px;
+  width: 100%;
+  margin-bottom: 10px; }
+
+.btn {
+  background: none repeat scroll 0 0 #232846;
+  border: medium none;
+  border-radius: 10px;
+  color: #DDE0F0;
+  float: left;
+  padding: 7px 10px;
+  text-decoration: none;
+  font-family: "Roboto Slab", serif; }

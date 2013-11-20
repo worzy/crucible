@@ -19,7 +19,7 @@
                             </ul>
                             @else
                             <ul>
-                                <li><a href="/post/create">Add</a></li>
+                                <li><a href="/post/create">Share</a></li>
                                 <li><a href="/logout">Log out</a></li>
                             </ul>
                             @endif
