@@ -66,10 +66,12 @@ h1, h2, h3, h4, h5, h6 {
 .main-content {
 	background: $white;
 	padding: 10px;
+	@include box-sizing();
 }
 
 .post {
 	padding: 10px;
+	@include box-sizing();
 	.left {
 		float: left;
     	padding: 0 15px 0 0;
@@ -98,3 +100,6 @@ h1, h2, h3, h4, h5, h6 {
 		margin: 0;
 	}
 }
+
+@import "forms";
+@import "buttons";

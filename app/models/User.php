@@ -3,7 +3,15 @@
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
+class User extends BaseModel implements UserInterface, RemindableInterface {
+
+
+	public static $rules = array(
+		'first_name'	=> 'required',
+		'last_name'		=> 'required',
+		'email'			=> 'required|email|unique:users',
+		'password'		=> 'required|Min:6'
+    );
 
 	/**
 	 * The database table used by the model.

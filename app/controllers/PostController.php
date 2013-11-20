@@ -55,6 +55,13 @@ class PostController extends BaseController {
 		$post->url 	 	= Input::get('url');
 		$post->user_id	= $user->id;
 
+
+		if(!$post->validate()){
+
+			return Redirect::to('post/create')->withErrors($post->v);
+			
+		}
+
 		$post->save();
 
 		return Redirect::route('home');
