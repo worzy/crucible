@@ -3,11 +3,12 @@
 class PostController extends BaseController {
 
 
-	public function __construct(Post $post)
+	public function __construct(Post $post, Tag $tag)
     {
         parent::__construct();
 
         $this->post = $post;
+        $this->tag = $tag;
     }
 
 	/**
@@ -17,7 +18,8 @@ class PostController extends BaseController {
 	 */
 	public function index()
 	{
-		$posts = $this->post->with('user')->orderBy('created_at', 'desc')->get();
+		$posts = $this->post->with(array('user','tags'))->orderBy('created_at', 'desc')->get();
+		
 		$gravatar = App::make('simplegravatar');
 
 		foreach($posts as $post)
@@ -55,6 +57,10 @@ class PostController extends BaseController {
 		$post->url 	 	= Input::get('url');
 		$post->user_id	= $user->id;
 
+		$tags = Input::get('tags');
+
+		$tags_array = explode(",", $tags);
+
 
 		if(!$post->validate()){
 
@@ -63,6 +69,21 @@ class PostController extends BaseController {
 		}
 
 		$post->save();
+
+		foreach($tags_array as $row)
+		{
+			$tag = trim($row);
+			$tag = $this->tag->where('name', '=', $tag)->first();
+
+			if(!$tag)
+			{
+				$tag = new Tag();
+				$tag->name = $row;
+				$tag->save();
+			}
+
+			$post->tags()->attach($tag->id);
+		}
 
 		return Redirect::route('home');
 	}
