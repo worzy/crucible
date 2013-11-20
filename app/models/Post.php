@@ -19,6 +19,11 @@ class Post extends BaseModel
         return $this->belongsTo('User');
     }
 
+    public function tags()
+    {
+        return $this->belongsToMany('Tag');
+    }
+
     public function timeSince()
     {
     	$periods = array("second", "minute", "hour", "day", "week", "month", "year", "decade");
