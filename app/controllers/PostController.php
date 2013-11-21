@@ -61,7 +61,6 @@ class PostController extends BaseController {
 
 		$tags_array = explode(",", $tags);
 
-
 		if(!$post->validate()){
 
 			return Redirect::to('post/create')->withErrors($post->v);
@@ -72,13 +71,13 @@ class PostController extends BaseController {
 
 		foreach($tags_array as $row)
 		{
-			$tag = trim($row);
-			$tag = $this->tag->where('name', '=', $tag)->first();
+			$tag_str = trim($row);
+			$tag = $this->tag->where('name', '=', $tag_str)->first();
 
 			if(!$tag)
 			{
 				$tag = new Tag();
-				$tag->name = $tag;
+				$tag->name = $tag_str;
 				$tag->save();
 			}
 
