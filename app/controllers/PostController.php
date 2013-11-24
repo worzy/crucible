@@ -106,7 +106,7 @@ class PostController extends BaseController {
 		$url = parse_url($post->url);
 		$post->domain = $url['host'];
 
-		foreach($post->comments as $comment)
+		foreach($post->comments as $k => $comment)
 		{
 			$comment->gravatar = $gravatar->getGravatar($comment->user->email);
 		}
