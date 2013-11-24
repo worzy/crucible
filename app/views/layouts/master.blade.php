@@ -34,8 +34,11 @@
                 </div>
                 <div class="clear"></div>
         </div>
-        <footer class="col8 pre4 suf4">
+        <div class="container">
+        <footer class="col8 pre2 suf2">
             <a href="">Bugs</a> <span>|</span> <a href="">Feature Requests</a> <span>|</span> <a href="/roadmap">Roadmap</a>
         </footer>
+        </div>
+        <div class="clear"></div>
 </body>
 </html>
