@@ -36,7 +36,7 @@
         </div>
         <div class="container">
         <footer class="col8 pre2 suf2">
-            <a target="_blank" href="https://github.com/worzy/crucible/issues">Bugs</a> <span>|</span> <a target="_blank" href="https://github.com/worzy/crucible/issues">Feature Requests</a> <span>|</span> <a href="/roadmap">Roadmap</a>
+            <a href="{{URL::to('rss')}}">RSS</a> <span>|</span> <a target="_blank" href="https://github.com/worzy/crucible/issues">Bugs</a> <span>|</span> <a target="_blank" href="https://github.com/worzy/crucible/issues">Feature Requests</a> <span>|</span> <a href="/roadmap">Roadmap</a>
         </footer>
         </div>
         <div class="clear"></div>
