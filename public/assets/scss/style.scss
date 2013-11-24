@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
 	background: $white;
-	padding: 20px 20px 30px;
+	padding: 20px 20px 20px;
 	@include box-sizing();
 	.error {
 		margin: 0 5px 0 0;
@@ -116,16 +116,48 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	ul {
 		list-style: none;
+		&.pager {
+			list-style: none;
+			margin: 30px 0;
+			padding: 0;
+			li {
+				margin: 0;
+				float: left;
+				padding: 7px 10px;
+				font-family: $body_font;
+				font-size: 18px;
+				font-weight: 600;
+				color: darken($white, 60);
+				text-decoration: none;
+				cursor: pointer;
+				line-height: 24px;
+				text-align: center;
+				&:last-child {
+					float: right;
+				}
+				&:before {
+				content: none;
+				}	
+				a {
+					color: $brand;
+					text-decoration: none;
+				}
+				&.disabled {
+				color: transparent;
+				}
+
+			}
+		}
 		li {
 			color: lighten($text, 15);
-		}
-		li:before {
-			content:'\2022';
-			vertical-align: middle;
-			margin: 0 8px 0 0;	
-      		color: $brand;	
-      		font-size: 22px;
-    }
+			&:before {
+				content:'\2022';
+				vertical-align: middle;
+				margin: 0 8px 0 0;	
+      			color: $brand;	
+      			font-size: 22px;
+      		}
+    	}
 	}
 }
 
