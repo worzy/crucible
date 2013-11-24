@@ -18,7 +18,9 @@ class PostController extends BaseController {
 	 */
 	public function index()
 	{
-		$posts = $this->post->with(array('user','tags'))->orderBy('created_at', 'desc')->get();
+		$posts = $this->post->with(array('user','tags'))
+		 					->orderBy('created_at', 'desc')
+		 					->paginate(10);
 
 		$gravatar = App::make('simplegravatar');
 
