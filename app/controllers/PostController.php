@@ -95,7 +95,7 @@ class PostController extends BaseController {
 	 */
 	public function show($id)
 	{
-		$post = $this->post->find($id);
+		$post = $this->post->with(array('comments', 'comments.user'))->find($id);
 
 		$this->layout->content = View::make('post.show', array('post' => $post));
 	}
