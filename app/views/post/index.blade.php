@@ -17,4 +17,5 @@
 	</div>
 	<div class="clear"></div>
 @endforeach
+<?php echo $posts->links(); ?>
 @stop
