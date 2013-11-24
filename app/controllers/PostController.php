@@ -102,16 +102,20 @@ class PostController extends BaseController {
 		foreach($tags_array as $row)
 		{
 			$tag_str = trim($row);
-			$tag = $this->tag->where('name', '=', $tag_str)->first();
 
-			if(!$tag)
+			if(!empty($tag_str))
 			{
-				$tag = new Tag();
-				$tag->name = $tag_str;
-				$tag->save();
-			}
+				$tag = $this->tag->where('name', '=', $tag_str)->first();
 
-			$post->tags()->attach($tag->id);
+				if(!$tag)
+				{
+					$tag = new Tag();
+					$tag->name = $tag_str;
+					$tag->save();
+				}
+			
+				$post->tags()->attach($tag->id);
+			}
 		}
 
 		return Redirect::route('home');
