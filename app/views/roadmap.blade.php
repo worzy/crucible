@@ -4,8 +4,13 @@
 
 <h3>Upcoming Features</h3>
 <ul>
-	<li>Detection for duplicate posts</li>
 	<li>Bookmarklet</li>
+	<li>Comment Replies</li>
+	<li>URL Screenshot</li>
+	<li>Profile Pages</li>
+	<li>Search</li>
+	<li>Post Click-Through Rate</li>
+	<li>Post A Question</li>
 </ul>
 
 <h3>Version 1.0.0 <span>- 25th November, 2013</span></h3>
