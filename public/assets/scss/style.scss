@@ -107,12 +107,26 @@ h1, h2, h3, h4, h5, h6 {
 		color: $error;
 		}
 	h3 {
+		display: inline-block;
 		margin: 30px 0 0 0;
 		font-size: 16px;
+		&.filter {
+			margin: 10px 0 20px 0;
+		}
 		span {
 			color: lighten($text, 20);
 			font-weight: 400;
 		}
+	}
+	.filter-tag {
+		margin: 0 0 0 5px;
+		display: inline-block;
+		background-color: darken($white, 10);
+		padding: 2px 14px;
+		@include radius(14px);
+		font-size: 20px;
+		color: lighten($black, 50);
+		text-transform: lowercase;
 	}
 	ul {
 		list-style: none;
