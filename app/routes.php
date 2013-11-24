@@ -11,6 +11,9 @@
 |
 */
 
+View::name('layouts.master', 'layout');
+$layout = View::of('layout');
+
 Route::get('/', array('as' => 'home', 'uses' => 'PostController@index'));
 Route::get('login', array('as' => 'user.login', 'uses' => 'UserController@getLogin'));
 Route::post('login', array('uses' => 'UserController@postLogin'));
@@ -18,3 +21,8 @@ Route::get('register', array('as' => 'user.register', 'uses' => 'UserController@
 Route::post('register', array('uses' => 'UserController@postRegister'));
 Route::get('logout', array('as' => 'user.logout', 'uses' => 'UserController@getLogout'));
 Route::resource('post', 'PostController');
+
+Route::get('roadmap', function() use ($layout)
+{
+    return $layout->nest('content', 'roadmap');
+});
