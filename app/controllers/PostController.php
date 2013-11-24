@@ -58,7 +58,7 @@ class PostController extends BaseController {
 			$post->gravatar = $gravatar->getGravatar($post->User->email);
 		}
 
-		$this->layout->content = View::make('post.index', array('posts' => $posts));
+		$this->layout->content = View::make('post.index', array('posts' => $posts, 'tag_title' => $tag_title));
 	}
 
 	/**
