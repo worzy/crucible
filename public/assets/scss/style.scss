@@ -67,6 +67,7 @@ h1, h2, h3, h4, h5, h6 {
 				    &:hover {
 				    	background: none repeat scroll 0 0 darken($brand, 10);
 				    	border: 1px solid darken($brand, 15);
+				    	text-shadow: 2px 2px darken($brand, 15);
 				    	opacity: 1;
 				    }
 				    &.cta {
@@ -75,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 				    	&:hover {
 				    	background: none repeat scroll 0 0 darken($brand, 20);
 				    	border: 1px solid darken($brand, 25);
+				    	text-shadow: 2px 2px darken($brand, 25);
 				    	}
 				    }
 				}   
@@ -85,9 +87,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
 	background: $white;
-	padding: 20px 10px;
+	padding: 20px 10px 30px;
 	@include box-sizing();
 	.error {
+		margin: 0 5px 0 0;
+		font-size: 26px;
+		line-height: 6px;
+		vertical-align: middle;
 		color: $error;
 		}
 }
@@ -108,7 +114,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	h2 {
 		margin: 0;
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 600;
 		text-transform: capitalize;
 		&:hover {
@@ -118,8 +124,20 @@ h1, h2, h3, h4, h5, h6 {
 	a {
 		text-decoration: none;
 		color: $text;
+		&:visited {
+			color: darken(desaturate($background, 55), 50);
+		}
+	}
+	.domain {
+		font-family: $title_font;
+		font-size: normal;
+		color: #616161;
+		font-size: 14px;
 	}
 	.tags {
+		margin: 5px 0 0 0;
+	}
+	.tag {
 		background-color: darken($white, 10);
 		padding: 2px 8px;
 		@include radius(8px);
@@ -132,15 +150,30 @@ h1, h2, h3, h4, h5, h6 {
 			color: $white;
 		}
 		
-	}
-	.domain {
-		font-family: $title_font;
-		font-size: normal;
-		color: #616161;
-		font-size: 14px;
-	}
+	}	
 	p {
 		margin: 0;
+	}
+}
+
+footer {
+	background-color: $background;
+	padding: 30px 0;
+	a {
+		color: darken(desaturate($background, 30), 30);
+		font-size: 14px;
+		float: right;
+		text-decoration: none;
+		&:hover {
+			color: darken(desaturate($background, 30), 50);
+		}
+	}
+	span {
+		color: darken(desaturate($background, 30), 8);
+		font-size: 18px;
+		float: right;
+		margin: 0 6px;
+		line-height: 16px;
 	}
 }
 

@@ -57,23 +57,29 @@ h1, h2, h3, h4, h5, h6 {
           .header .main-nav ul li a:hover {
             background: none repeat scroll 0 0 #b8361b;
             border: 1px solid #a22f18;
+            text-shadow: 2px 2px #a22f18;
             opacity: 1; }
           .header .main-nav ul li a.cta {
             background: none repeat scroll 0 0 #a22f18;
             border: 1px solid #8b2915; }
             .header .main-nav ul li a.cta:hover {
               background: none repeat scroll 0 0 #8b2915;
-              border: 1px solid #752211; }
+              border: 1px solid #752211;
+              text-shadow: 2px 2px #752211; }
 
 .main-content {
   background: white;
-  padding: 20px 10px;
+  padding: 20px 10px 30px;
   box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box; }
   .main-content .error {
+    margin: 0 5px 0 0;
+    font-size: 26px;
+    line-height: 6px;
+    vertical-align: middle;
     color: #dc3f47; }
 
 .post {
@@ -96,7 +102,7 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 35px; }
   .post h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     text-transform: capitalize; }
     .post h2:hover {
@@ -104,7 +110,16 @@ h1, h2, h3, h4, h5, h6 {
   .post a {
     text-decoration: none;
     color: #343434; }
+    .post a:visited {
+      color: #6c6c6c; }
+  .post .domain {
+    font-family: "Roboto Slab", serif;
+    font-size: normal;
+    color: #616161;
+    font-size: 14px; }
   .post .tags {
+    margin: 5px 0 0 0; }
+  .post .tag {
     background-color: #e6e6e6;
     padding: 2px 8px;
     -ms-border-radius: 8px;
@@ -115,16 +130,28 @@ h1, h2, h3, h4, h5, h6 {
     color: gray;
     text-transform: lowercase;
     cursor: pointer; }
-    .post .tags:hover {
+    .post .tag:hover {
       background-color: #df4627;
       color: white; }
-  .post .domain {
-    font-family: "Roboto Slab", serif;
-    font-size: normal;
-    color: #616161;
-    font-size: 14px; }
   .post p {
     margin: 0; }
+
+footer {
+  background-color: #e2f3f4;
+  padding: 30px 0; }
+  footer a {
+    color: #90abad;
+    font-size: 14px;
+    float: right;
+    text-decoration: none; }
+    footer a:hover {
+      color: #5b7a7c; }
+  footer span {
+    color: #d1dcdd;
+    font-size: 18px;
+    float: right;
+    margin: 0 6px;
+    line-height: 16px; }
 
 fieldset {
   border: 0 none;
@@ -177,3 +204,21 @@ input:focus {
   .btn:hover {
     background: none repeat scroll 0 0 #a22f18;
     border: 1px solid #8b2915; }
+
+.btn_back {
+  margin: 2px 0 0 10px;
+  width: 80px;
+  background: none repeat scroll 0 0 #cccccc;
+  border: 1px solid #b3b3b3;
+  border-radius: 5px 5px 5px 5px;
+  float: left;
+  padding: 7px 0px;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer; }
+  .btn_back:hover {
+    background: none repeat scroll 0 0 #b3b3b3;
+    border: 1px solid #999999; }

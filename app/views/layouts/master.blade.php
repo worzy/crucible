@@ -34,8 +34,8 @@
                 </div>
                 <div class="clear"></div>
         </div>
-        <div class="container">
-
-        </div>
+        <footer class="col8 pre4 suf4">
+            <a href="">Bugs</a> <span>|</span> <a href="">Feature Requests</a> <span>|</span> <a href="/roadmap">Roadmap</a>
+        </footer>
 </body>
 </html>
