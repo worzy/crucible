@@ -1,6 +1,9 @@
 @section('content')
 <div class="form col4">
 {{ Form::open() }}
+@foreach ($errors->all() as $error)
+    <p><span class="error">&times;</span> {{ $error }}</p>
+@endforeach
 <fieldset>
     <label for="email">Email address</label> <input type="email" name="email" placeholder="Enter your email">
 	<label for="password">Password</label> <input type="password" name="password" placeholder="Enter your password">
