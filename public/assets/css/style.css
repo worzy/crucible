@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
   background: white;
-  padding: 20px 10px 30px;
+  padding: 20px 20px 30px;
   box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
       font-size: 22px; }
 
 .post {
-  padding: 15px 10px;
+  padding: 15px 0;
   box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;

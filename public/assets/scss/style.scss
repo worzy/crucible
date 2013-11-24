@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content {
 	background: $white;
-	padding: 20px 10px 30px;
+	padding: 20px 20px 30px;
 	@include box-sizing();
 	.error {
 		margin: 0 5px 0 0;
@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .post {
-	padding: 15px 10px;
+	padding: 15px 0;
 	@include box-sizing();
 	.left {
 		float: left;
