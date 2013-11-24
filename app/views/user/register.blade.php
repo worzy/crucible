@@ -1,6 +1,10 @@
 @section('content')
 {{ Form::open() }}
+
 <div class="col6">
+	@foreach ($errors->all() as $error)
+	    <p><span class="error">&times;</span> {{ $error }}</p>
+	@endforeach
 	<fieldset>
 		<label for="name">Name</label> <input type="text" name="first_name" placeholder="John Smith?">
 		<label for="email">Email</label> <input type="email" name="email" placeholder="We will pull your Gravatar using this.">

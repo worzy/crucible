@@ -27,15 +27,18 @@ class UserController extends BaseController {
 		}
 		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
 		{
-		    echo 'Login field is required.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('register')->withErrors($errors);
 		}
 		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
 		{
-		    echo 'Password field is required.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('register')->withErrors($errors);
 		}
 		catch (Cartalyst\Sentry\Users\UserExistsException $e)
 		{
-		    echo 'User with this login already exists.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('register')->withErrors($errors);
 		}
 
 		$this->layout->content = View::make('user.register');
@@ -66,33 +69,40 @@ class UserController extends BaseController {
 		}
 		catch (Cartalyst\Sentry\Users\LoginRequiredException $e)
 		{
-		    echo 'Login field is required.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('login')->withErrors($errors);
 		}
 		catch (Cartalyst\Sentry\Users\PasswordRequiredException $e)
 		{
-		    echo 'Password field is required.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('login')->withErrors($errors);
 		}
 		catch (Cartalyst\Sentry\Users\WrongPasswordException $e)
 		{
-		    echo 'Wrong password, try again.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('login')->withErrors($errors);
 		}
 		catch (Cartalyst\Sentry\Users\UserNotFoundException $e)
 		{
-		    echo 'User was not found.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('login')->withErrors($errors);
 		}
 		catch (Cartalyst\Sentry\Users\UserNotActivatedException $e)
 		{
-		    echo 'User is not activated.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('login')->withErrors($errors);
 		}
 
 		// The following is only required if throttle is enabled
 		catch (Cartalyst\Sentry\Throttling\UserSuspendedException $e)
 		{
-		    echo 'User is suspended.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('login')->withErrors($errors);
 		}
 		catch (Cartalyst\Sentry\Throttling\UserBannedException $e)
 		{
-		    echo 'User is banned.';
+		    $errors = $e->getMessage();
+		    return Redirect::to('login')->withErrors($errors);
 		}
 
 		$this->layout->content = View::make('user.login');
