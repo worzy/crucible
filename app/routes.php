@@ -20,7 +20,9 @@ Route::post('login', array('uses' => 'UserController@postLogin'));
 Route::get('register', array('as' => 'user.register', 'uses' => 'UserController@getRegister'));
 Route::post('register', array('uses' => 'UserController@postRegister'));
 Route::get('logout', array('as' => 'user.logout', 'uses' => 'UserController@getLogout'));
+
 Route::resource('post', 'PostController');
+Route::resource('comment', 'CommentController');
 
 Route::get('roadmap', function() use ($layout)
 {
