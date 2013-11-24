@@ -110,6 +110,11 @@ h1, h2, h3, h4, h5, h6 {
     .main-content h3 span {
       color: #676767;
       font-weight: 400; }
+    .main-content h3 a {
+      color: #df4627;
+      font-weight: 400;
+      font-size: 12px;
+      margin: 0 0 0 5px; }
   .main-content .filter-tag {
     margin: 0 0 0 5px;
     display: inline-block;
