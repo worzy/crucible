@@ -13,25 +13,38 @@
 		       @endforeach</p>
 		    </p>
 		</div>
-	</div>
-	<div class="clear"></div>
-<h3>Comments</h3>
-@foreach($post->comments as $row)
-<div class="left">
-	<img class="image" src="{{ $post->gravatar }}">
-</div>
-<h4>{{ $post->User->first_name }} {{ substr ( $post->User->last_name , 0, 1 ) }}</h4>
-<p>{{$row->content}}</p>
-<p>{{ $row->timeSince() }}</p>
-@endforeach
 
-{{ Form::open(array('url' => 'comment')) }}
-@foreach ($errors->all() as $error)
-    <p><span class="error">&times;</span> {{ $error }}</p>
-@endforeach
-<input type="hidden" name="post_id" value="{{$post->id}}">
-<textarea name="content"></textarea>
-<input class="btn" type="submit" value="Add a comment">
-{{ Form::close() }}
+<div class="clear"></div>
+
+		<h3>Comments</h3>
+		@foreach($post->comments as $row)
+		<div class="comment">
+		<div class="left">
+			<img class="image" src="{{ $row->gravatar }}">
+		</div>
+		<div class="right">
+		<h4>{{ $post->User->first_name }} {{ substr ( $post->User->last_name , 0, 1 ) }}</h4>
+		<p>{{nl2br ($row->content)}}</p>
+		<p class="time">{{ $row->timeSince() }}</p>
+		</div>
+		</div>
+		<div class="clear"></div>
+		@endforeach
+
+		
+		{{ Form::open(array('url' => 'comment')) }}
+		<div class="add">
+		@foreach ($errors->all() as $error)
+    		<p><span class="error">&times;</span> {{ $error }}</p>
+		@endforeach
+		<input type="hidden" name="post_id" value="{{$post->id}}">
+		<textarea name="content"></textarea>
+		<input class="btn" type="submit" value="Add a comment">
+		</div>
+		{{ Form::close() }}
+	  	
+
+</div>
+<div class="clear"></div>
 
 @stop
