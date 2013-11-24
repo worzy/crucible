@@ -1,8 +1,8 @@
 @section('content') 
 <h2>Roadmap</h2>
-<p>This is Crucible's roadmap. Here you can find out about new features that are in the pipeline and what's new in each version.</p>
+<p>This is Crucible's roadmap. This is where we post new features that are in the pipeline and the version history.</p>
 
-<h3>Upcoming Features</h3>
+<h3>Upcoming Features <a class="request" target="_blank" href="https://github.com/worzy/crucible/issues">Submit a feature request</a></h3>
 <ul>
 	<li>Advanced Commenting (Replies, Editing etc.)</li>
 	<li>URL Screenshot</li>
