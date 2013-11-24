@@ -21,6 +21,8 @@ Route::get('register', array('as' => 'user.register', 'uses' => 'UserController@
 Route::post('register', array('uses' => 'UserController@postRegister'));
 Route::get('logout', array('as' => 'user.logout', 'uses' => 'UserController@getLogout'));
 
+Route::get('tags/{title}', array('as' => 'posts.tags', 'uses' => 'PostController@tags'));
+
 Route::resource('post', 'PostController');
 Route::resource('comment', 'CommentController');
 

@@ -36,6 +36,32 @@ class PostController extends BaseController {
 	}
 
 	/**
+	 * Display a listing of the resource by tag.
+	 *
+	 * @return Response
+	 */
+	public function tags($tag_title)
+	{
+		$tag = $this->tag->where('name', '=', $tag_title)->first();
+
+		$posts = $tag->posts()->with(array('user','tags'))
+		 					->orderBy('created_at', 'desc')
+		 					->paginate(10);
+
+		$gravatar = App::make('simplegravatar');
+
+		foreach($posts as $post)
+		{
+			$post->user = $post;
+			$url = parse_url($post->url);
+			$post->domain = $url['host'];
+			$post->gravatar = $gravatar->getGravatar($post->User->email);
+		}
+
+		$this->layout->content = View::make('post.index', array('posts' => $posts));
+	}
+
+	/**
 	 * Show the form for creating a new resource.
 	 *
 	 * @return Response
