@@ -2,6 +2,5 @@
 /vendor
 /public/assets/.sass-cache
 composer.phar
-composer.lock
 .DS_Store
 Thumbs.db

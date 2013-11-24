@@ -35,3 +35,21 @@ Route::get('bookmarklet', function() use ($layout)
 {
     return $layout->nest('content', 'bookmarklet');
 });
+
+Route::get('/rss', function()
+{
+    $feed = Rss::feed('2.0', 'UTF-8');
+    $feed->channel(array('title' => 'Crucible Feed', 'description' => 'Simple web app for saving sharing links within your organisation powered by Laravel', 'link' => URL::to('/')));
+    
+    $posts = Post::with(array('user','tags'))
+		 		 ->orderBy('created_at', 'desc')
+		 		 ->take(20)
+		 		 ->get();
+
+	foreach($posts as $post)
+	{
+        $feed->item(array('title' => $post->title, 'description|cdata' => '<a href="'.URL::route('post.show', array($post->id)).'">Comments</a>', 'link' => $post->url));
+    }
+
+    return Response::make($feed, 200, array('Content-Type' => 'text/xml'));
+});
