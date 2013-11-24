@@ -102,8 +102,12 @@ class PostController extends BaseController {
 		$post->gravatar = $gravatar->getGravatar($post->User->email);
 
 		$url = parse_url($post->url);
-		
 		$post->domain = $url['host'];
+
+		foreach($post->comments as $comment)
+		{
+			$comment->gravatar = $gravatar->getGravatar($comment->user->email);
+		}
 
 		$this->layout->content = View::make('post.show', array('post' => $post));
 	}
