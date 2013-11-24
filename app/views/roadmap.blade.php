@@ -4,7 +4,6 @@
 
 <h3>Upcoming Features</h3>
 <ul>
-	<li>Bookmarklet</li>
 	<li>Advanced Commenting (Replies, Editing etc.)</li>
 	<li>URL Screenshot</li>
 	<li>Profile Pages</li>
