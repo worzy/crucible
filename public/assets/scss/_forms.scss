@@ -9,7 +9,7 @@ label {
     margin-bottom: 5px;
 }
 
-textarea, 
+
 input[type="text"], 
 input[type="password"], 
 input[type="datetime"], 
@@ -32,6 +32,20 @@ input[type="color"],
     height: 15px;
     margin-bottom: 15px;
 }
+
+textarea {
+    height: 100px;
+    border: solid 1px darken($white, 30);
+    border-radius: 5px;
+    margin: 30px 0 15px 0;
+    padding: 8px;
+    width: 92%;
+    &:focus {
+        border:solid 1px $brand;
+        outline: none; 
+    }
+}
+
 input:focus { 
 border:solid 1px $brand;
 outline: none; 
