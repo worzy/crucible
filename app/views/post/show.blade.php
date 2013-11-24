@@ -21,4 +21,14 @@
 <p>{{$row->content}}</p>
 <p>{{ $row->timeSince() }}</p>
 @endforeach
+
+{{ Form::open(array('url' => 'comment')) }}
+@foreach ($errors->all() as $error)
+    <p><span class="error">&times;</span> {{ $error }}</p>
+@endforeach
+<input type="hidden" name="post_id" value="{{$post->id}}">
+<textarea name="content"></textarea>
+<input class="btn" type="submit" value="Add a comment">
+{{ Form::close() }}
+
 @stop
