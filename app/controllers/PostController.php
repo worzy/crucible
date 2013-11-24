@@ -95,7 +95,15 @@ class PostController extends BaseController {
 	 */
 	public function show($id)
 	{
+		$gravatar = App::make('simplegravatar');
+
 		$post = $this->post->with(array('comments', 'comments.user'))->find($id);
+
+		$post->gravatar = $gravatar->getGravatar($post->User->email);
+
+		$url = parse_url($post->url);
+		
+		$post->domain = $url['host'];
 
 		$this->layout->content = View::make('post.show', array('post' => $post));
 	}
