@@ -70,7 +70,10 @@ class PostController extends BaseController {
 	 */
 	public function create()
 	{
-		$this->layout->content = View::make('post.create');
+		$bookmark['url'] = Input::get('u');
+		$bookmark['title'] = Input::get('t');
+
+		$this->layout->content = View::make('post.create', array('bookmark' => $bookmark));
 	}
 
 	/**
