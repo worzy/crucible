@@ -90,11 +90,26 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
     color: #dc3f47; }
   .main-content h3 {
+    display: inline-block;
     margin: 30px 0 0 0;
     font-size: 16px; }
+    .main-content h3.filter {
+      margin: 10px 0 20px 0; }
     .main-content h3 span {
       color: #676767;
       font-weight: 400; }
+  .main-content .filter-tag {
+    margin: 0 0 0 5px;
+    display: inline-block;
+    background-color: #e6e6e6;
+    padding: 2px 14px;
+    -ms-border-radius: 14px;
+    -moz-border-radius: 14px;
+    -webkit-border-radius: 14px;
+    border-radius: 14px;
+    font-size: 20px;
+    color: gray;
+    text-transform: lowercase; }
   .main-content ul {
     list-style: none; }
     .main-content ul.pager {
@@ -260,7 +275,7 @@ textarea {
   border-radius: 5px;
   margin: 30px 0 15px 0;
   padding: 8px;
-  width: 92%; }
+  width: 90%; }
   textarea:focus {
     border: solid 1px #df4627;
     outline: none; }
