@@ -6,7 +6,11 @@ class Post extends BaseModel
 
     public static $rules = array(
 		'title'		=> 'required|min:6',
-		'url'		=> 'required|url',
+		'url'		=> 'required|url|unique:posts,url',
+    );
+
+    public static $messages = array(
+        'url.unique' => 'The URL has already been posted.',
     );
 
     public function comments()

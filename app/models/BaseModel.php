@@ -11,7 +11,14 @@ class BaseModel extends Eloquent
             $input = Input::all();
         }
 
-        $this->v = Validator::make($input, static::$rules);
+        $messages = array();
+
+        if(!empty(static::$messages))
+        {
+            $messages = static::$messages;
+        }
+
+        $this->v = Validator::make($input, static::$rules, $messages);
 
         if ($this->v->passes()) {
             return true;

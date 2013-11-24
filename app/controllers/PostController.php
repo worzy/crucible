@@ -7,6 +7,8 @@ class PostController extends BaseController {
     {
         parent::__construct();
 
+        $this->beforeFilter('auth', array('only' => array('create', 'store', )));
+
         $this->post = $post;
         $this->tag = $tag;
     }
