@@ -118,6 +118,7 @@ return array(
 		// Crucible
 		'Cartalyst\Sentry\SentryServiceProvider',
 		'Euantor\SimpleGravatar\SimpleGravatarServiceProvider',
+		'Thujohn\Rss\RssServiceProvider',
 		//'Raahul\LarryFour\LarryFourServiceProvider',
 
 	),
@@ -187,6 +188,7 @@ return array(
 
 		// Crucible
 		'Sentry' => 'Cartalyst\Sentry\Facades\Laravel\Sentry',
+		'Rss' 	 => 'Thujohn\Rss\RssFacade',
 
 	),
 
