@@ -30,3 +30,8 @@ Route::get('roadmap', function() use ($layout)
 {
     return $layout->nest('content', 'roadmap');
 });
+
+Route::get('bookmarklet', function() use ($layout)
+{
+    return $layout->nest('content', 'bookmarklet');
+});
