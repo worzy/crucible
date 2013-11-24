@@ -15,4 +15,22 @@
 		border: 1px solid darken($brand, 20);
 	}
 }
-
+.btn_back {
+	margin: 2px 0 0 10px;
+	width: 80px;
+	background: none repeat scroll 0 0 darken($white, 20);
+	border: 1px solid darken($white, 30);
+	border-radius: 5px 5px 5px 5px;
+	float: left;
+	padding: 7px 0px;
+	font-family: $body_font;
+	font-size: 16px;
+	color: $white;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	&:hover {
+		background: none repeat scroll 0 0 darken($white, 30);
+		border: 1px solid darken($white, 40);
+	}
+}
