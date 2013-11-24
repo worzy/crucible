@@ -20,7 +20,7 @@ class PostController extends BaseController {
 	{
 		$posts = $this->post->with(array('user','tags'))
 		 					->orderBy('created_at', 'desc')
-		 					->paginate(10);
+		 					->paginate(15);
 
 		$gravatar = App::make('simplegravatar');
 
