@@ -45,6 +45,10 @@ class CommentController extends BaseController {
 		$comment->post_id 	= Input::get('post_id');
 		$comment->user_id	= $user->id;
 
+		if(!$comment->validate()){
+			return Redirect::route('post.show', array(Input::get('post_id')))->withErrors($comment->v);
+		}
+
 		$comment->save();
 
 		return Redirect::route('post.show', array(Input::get('post_id')));
