@@ -31,6 +31,16 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 12px;
 }
 
+.comments {
+	color: $text;
+	font-size: 12px;
+	cursor: pointer;
+	text-decoration: underline;
+	&:hover {
+		color: $brand;
+	}
+}
+
 .header {
 	background-color: $brand;
 	height: 68px;

@@ -21,6 +21,14 @@ h1, h2, h3, h4, h5, h6 {
   color: #a6a5a5;
   font-size: 12px; }
 
+.comments {
+  color: #343434;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: underline; }
+  .comments:hover {
+    color: #df4627; }
+
 .header {
   background-color: #df4627;
   height: 68px; }
@@ -206,7 +214,6 @@ input:focus {
   outline: none; }
 
 .btn {
-  width: 80px;
   background: none repeat scroll 0 0 #ce3c1f;
   border: 1px solid #b8361b;
   border-radius: 5px 5px 5px 5px;
@@ -223,7 +230,6 @@ input:focus {
 
 .btn_back {
   margin: 2px 0 0 10px;
-  width: 80px;
   background: none repeat scroll 0 0 #cccccc;
   border: 1px solid #b3b3b3;
   border-radius: 5px 5px 5px 5px;
