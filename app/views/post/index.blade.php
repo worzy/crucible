@@ -1,4 +1,5 @@
 @section('content') 
+<h3 class="filter">Filtering by:</h3> <p class="filter-tag">css</p>
 @foreach ($posts as $row)
 	<div class="post col8 alpha omega">
 		<div class="left">
