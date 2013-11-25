@@ -38,7 +38,7 @@
     		<p><span class="error">&times;</span> {{ $error }}</p>
 		@endforeach
 		<input type="hidden" name="post_id" value="{{$post->id}}">
-		<textarea name="content"></textarea>
+		<textarea name="content" placeholder="Standard text or HTML is all good here"></textarea>
 		<input class="btn" type="submit" value="Add a comment">
 		</div>
 		{{ Form::close() }}

@@ -5,6 +5,7 @@
 <h3>Upcoming Features <a class="request" target="_blank" href="https://github.com/worzy/crucible/issues">Submit a feature request</a></h3>
 <ul>
 	<li>Advanced Commenting (Replies, Editing etc.)</li>
+	<li>Advanced Tag Filtering</li>
 	<li>URL Screenshot</li>
 	<li>Profile Pages</li>
 	<li>Search</li>
@@ -12,7 +13,7 @@
 	<li>Post A Question</li>
 </ul>
 
-<h3>Version 1.0.0 <span>- 25th November, 2013</span></h3>
+<h3>Version 1.0.0 <span>- 26th November, 2013</span></h3>
 <ul>
 	<li>Unleashed to the world</li>
 </ul>
