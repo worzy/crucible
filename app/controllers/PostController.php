@@ -34,6 +34,8 @@ class PostController extends BaseController {
 			$post->gravatar = $gravatar->getGravatar($post->User->email);
 		}
 
+		$this->layout->meta = array('title' => '', 'desc' => '');
+
 		$this->layout->content = View::make('post.index', array('posts' => $posts));
 	}
 
@@ -59,6 +61,9 @@ class PostController extends BaseController {
 			$post->domain = $url['host'];
 			$post->gravatar = $gravatar->getGravatar($post->User->email);
 		}
+
+		// Set meta
+		$this->layout->meta = array('title' => $tag_title, 'desc' => '');
 
 		$this->layout->content = View::make('post.index', array('posts' => $posts, 'tag_title' => $tag_title));
 	}
@@ -145,6 +150,9 @@ class PostController extends BaseController {
 		{
 			$comment->gravatar = $gravatar->getGravatar($comment->user->email);
 		}
+
+		// Set meta
+		$this->layout->meta = array('title' => $post->title, 'desc' => '');
 
 		$this->layout->content = View::make('post.show', array('post' => $post));
 	}

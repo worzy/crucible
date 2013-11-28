@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Crucible</title>
+        <title>@if(!empty($meta['title'])){{ $meta['title'] }} | @endif Crucible</title>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css" media="all and (min-width: 120px)">
 </head>
