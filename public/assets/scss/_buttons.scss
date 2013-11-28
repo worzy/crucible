@@ -1,8 +1,8 @@
 .btn {
+	display: inline-block;
 	background: none repeat scroll 0 0 darken($brand, 5);
 	border: 1px solid darken($brand, 10);
 	border-radius: 5px 5px 5px 5px;
-	float: left;
 	padding: 6px 10px;
 	font-family: $body_font;
 	font-size: 16px;
