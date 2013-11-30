@@ -36,7 +36,12 @@
         </div>
         <div class="container">
         <footer class="col8 pre2 suf2">
-             <a target="_blank" href="https://github.com/worzy/crucible/issues">Bugs</a> <span>|</span> <a target="_blank" href="https://github.com/worzy/crucible/issues">Feature Requests</a> <span>|</span> <a href="/roadmap">Roadmap</a> <span>|</span> <a href="/bookmarklet">Bookmarklet</a> <span>|</span> <a href="{{URL::to('rss')}}">RSS Feed</a>
+             <ul class="footer-links"> 
+                <li><a href="{{URL::to('rss')}}">RSS Feed</a></li> <span>|</span> 
+                <li><a href="/bookmarklet">Bookmarklet</a></li> <span>|</span> 
+                <li><a href="/roadmap">Roadmap</a></li> <span>|</span> 
+                <li><a target="_blank" href="https://github.com/worzy/crucible/issues">Feature Requests &amp; Bugs</a></li> 
+            </ul>
         </footer>
         </div>
         <div class="clear"></div>

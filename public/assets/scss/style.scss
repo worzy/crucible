@@ -299,7 +299,6 @@ footer {
 	a {
 		color: darken(desaturate($background, 30), 30);
 		font-size: 14px;
-		float: right;
 		text-decoration: none;
 		&:hover {
 			color: darken(desaturate($background, 30), 50);
@@ -308,9 +307,16 @@ footer {
 	span {
 		color: darken(desaturate($background, 30), 8);
 		font-size: 18px;
-		float: right;
+		float: left;
 		margin: 0 6px;
 		line-height: 16px;
+	}
+	ul {
+		list-style: none;
+		float: right;
+		li {
+			float: left;
+		}
 	}
 }
 
