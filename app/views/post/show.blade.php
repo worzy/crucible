@@ -23,7 +23,7 @@
 			<img class="image" src="{{ $row->gravatar }}">
 		</div>
 		<div class="right">
-		<h4>{{ $post->User->first_name }} {{ substr ( $post->User->last_name , 0, 1 ) }}</h4>
+		<h4>{{ $row->User->first_name }} {{ substr ( $row->User->last_name , 0, 1 ) }}</h4>
 		<p>{{nl2br ($row->content)}}</p>
 		<p class="time">{{ $row->timeSince() }}</p>
 		</div>
