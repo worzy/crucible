@@ -9,7 +9,7 @@
 		       <span class="sub-text">Posted by {{ $post->User->first_name }} {{ substr ( $post->User->last_name , 0, 1 ) }} {{ $post->timeSince() }}</span> 
 		       <br>
 		       <p class="tags">@foreach($post->tags as $tag)
-		       <a class="tag">{{$tag->name}}</a>
+		       <a href="{{URL::route('posts.tags', array($tag->name))}}" class="tag">{{$tag->name}}</a>
 		       @endforeach</p>
 		    </p>
 		</div>
