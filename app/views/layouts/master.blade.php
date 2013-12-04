@@ -32,9 +32,8 @@
                 <div class="main-content col8 pre2 suf2">
                          @yield('content')
                 </div>
-                <div class="clear"></div>
-        </div>
-        <div class="container">
+            
+        
         <footer class="col8 pre2 suf2">
              <ul class="footer-links"> 
                 <li><a href="{{URL::to('rss')}}">RSS Feed</a></li> <span>|</span> 
