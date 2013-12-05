@@ -3,6 +3,7 @@
 <h3 class="filter">Filtering by:</h3> <p class="filter-tag"><a href="/">&times;</a>{{$tag_title}}</p>
 @endif
 @foreach ($posts as $row)
+<div class="fade">
 	<div class="post col8 alpha omega">
 		<div class="left">
 			<img class="image" src="{{ $row->gravatar }}">
@@ -17,7 +18,8 @@
 		       @endforeach</p>
 		</div>
 	</div>
-	<div class="clear"></div>
+</div>
+<div class="clear"></div>
 @endforeach
 <?php echo $posts->links(); ?>
 @stop
