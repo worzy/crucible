@@ -28,12 +28,15 @@
                 <div class="clear"></div>
         </div>
     </div>
+    
         <div class="container">
                 <div class="main-content col8 pre2 suf2">
+                        <div class="fade">
                          @yield('content')
+                         </div> 
                 </div>
             
-        
+    
         <footer class="col8 pre2 suf2">
              <ul class="footer-links"> 
                 <li><a href="{{URL::to('rss')}}">RSS Feed</a></li> <span>|</span> 

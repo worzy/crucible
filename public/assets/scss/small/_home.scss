@@ -1,1 +1,38 @@
-// Home page
+.header {
+	.logo {
+		width: auto;
+		margin: 4px 0 0 0;
+		float: left;
+		text-decoration: none;
+	}
+}
+
+.main-content {
+	padding: 35px 20px 20px 20px;
+	.filter {
+		min-width: 0;
+		margin: -35px -20px 25px -20px;
+	}
+}
+
+.post {
+	@include box-sizing();
+	.right {
+		float: left;
+		width: 80%;
+	}
+	.image {
+		width: 40px;
+		height: 40px;
+		@include radius(20px);
+	}
+	.tags {
+		margin: 5px 0 30px 0;
+	}
+}
+
+footer {
+	ul {
+		padding: 0;
+	}
+}

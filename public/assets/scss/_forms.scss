@@ -7,8 +7,10 @@ fieldset {
 }
 
 label {
+    color: $text;
     display: block;
-    margin-bottom: 5px;
+    height: 15px;
+    margin: 0 0 10px 0;
 }
 
 
@@ -32,7 +34,7 @@ input[type="color"],
     padding: 8px;
     width: 95%;
     height: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 textarea {

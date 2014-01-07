@@ -1,1 +1,309 @@
-// Home page
+.header {
+	background-color: $brand;
+	height: 68px;
+	.logo {
+		width: 200px;
+		margin: 4px 0 0 0;
+		float: left;
+		text-decoration: none;
+	}
+	h1 {
+		color: $white;
+		font-size: 22px;
+		font-weight: normal;
+
+	}
+	.main-nav {
+		float: right;
+		font-family: $title_font;
+		ul {
+			list-style: none;
+			li {
+				float: left;
+				margin-left: 10px;
+				a {
+					background: none repeat scroll 0 0 darken($brand, 5);
+					border: 1px solid darken($brand, 10);
+				    @include radius(5px);
+				    float: left;
+				    padding: 7px 10px;
+				    font-family: $body_font;
+				    color: $white;
+				    opacity: 0.9;
+				    text-decoration: none;
+				    &:hover {
+				    	background: none repeat scroll 0 0 darken($brand, 10);
+				    	border: 1px solid darken($brand, 15);
+				    	text-shadow: 2px 2px darken($brand, 15);
+				    	opacity: 1;
+				    }
+				    &.cta {
+				    	background: none repeat scroll 0 0 darken($brand, 15);
+				    	border: 1px solid darken($brand, 20);
+				    	&:hover {
+				    	background: none repeat scroll 0 0 darken($brand, 20);
+				    	border: 1px solid darken($brand, 25);
+				    	text-shadow: 2px 2px darken($brand, 25);
+				    	}
+				    }
+				}   
+			}
+		}
+	}
+}
+
+@-webkit-keyframes slide-fade {
+        0% { -webkit-transform: translate3d(0, -3px, 0); 
+             -webkit-animation-timing-function: ease-in;
+             opacity: 0; }
+       100% { -webkit-transform: translate3d(0, 0px, 0); 
+             -webkit-animation-timing-function: ease-out;
+             opacity: 1; }
+}
+
+.main-content {
+	z-index: -3;
+	background: $white;
+	@include box-sizing();
+	.bookmarklet {
+		background-color: $brand;
+		@include radius(5px);
+		margin: 20px 0 30px 0;
+		padding: 7px 10px;
+		color: $white;
+		text-decoration: none;
+	}
+	.fade {
+		-webkit-animation: slide-fade 0.4s;
+	}
+	p { 
+		margin: 0 0 10px 0;
+	}
+	.error {
+		margin: 0 5px 0 0;
+		font-size: 26px;
+		line-height: 6px;
+		vertical-align: middle;
+		color: $error;
+		}
+	h3 {
+		display: inline-block;
+		margin: 10px 0 0 0;
+		font-size: 16px;
+		span {
+			color: lighten($text, 20);
+			font-weight: 400;
+		}
+		a {
+			color: $brand;
+			font-weight: 400;
+			font-size: 12px;
+			margin: 0 0 0 5px;
+		}
+	}
+	.filter {
+		margin: -20px 0 20px -20px;
+		min-width: 600px; 
+		background-color: darken($white, 5);
+		padding: 0 20px 0 0;
+		h3 {
+			background-color: darken($white, 10);
+			padding: 20px 20px 20px 20px;
+			margin: 0;
+		}
+	}
+	.filter-tag {
+		margin: 0 0 0 10px;
+		display: inline-block;
+		height: 20px;
+		padding: 2px 8px;
+		background-color: $brand;
+		vertical-align: middle;
+		@include radius(12px);
+		font-size: 16px;
+		color: $white;
+		text-transform: lowercase;
+		a {
+			text-decoration: none;
+			color: darken($brand, 20);
+			font-size: 18px;
+			vertical-align: middle;
+			margin: 0 5px 0 0;
+			font-weight: bold;
+			&:hover {
+				color: darken($brand, 40);
+			}
+		}
+	}
+	ul {
+		list-style: none;
+		margin: 12px 0 10px 20px;
+		padding: 0;
+		&.pager {
+			list-style: none;
+			margin: 30px 0;
+			padding: 0;
+			li {
+				margin: 0;
+				float: left;
+				padding: 7px 10px;
+				font-family: $body_font;
+				font-size: 18px;
+				font-weight: 600;
+				color: darken($white, 60);
+				text-decoration: none;
+				cursor: pointer;
+				line-height: 24px;
+				text-align: center;
+				&:last-child {
+					float: right;
+				}
+				&:before {
+				content: none;
+				}	
+				a {
+					color: $brand;
+					text-decoration: none;
+				}
+				&.disabled {
+				color: transparent;
+				}
+
+			}
+		}
+		li {
+			color: lighten($text, 15);
+			&:before {
+				content:'\2022';
+				vertical-align: middle;
+				margin: 0 8px 0 0;	
+      			color: $brand;	
+      			font-size: 22px;
+      		}
+    	}
+	}
+}
+
+.post {
+	padding: 15px 0;
+	@include box-sizing();
+	.left {
+		float: left;
+    	padding: 0 15px 0 0;
+	}
+	.right {
+		float: left;
+		width: 500px;
+	}
+	.image {
+		@include radius(35px);
+	}
+	h1 {
+		margin: 0;
+		font-size: 24px;
+		&:hover {
+			color: $brand;
+		}
+	}
+	h2 {
+		margin: 0;
+		font-size: 18px;
+		font-weight: 600;
+		text-transform: capitalize;
+		&:hover {
+			color: $brand;
+		}
+	}
+	h3 {
+		font-size: 22px;
+		margin: 50px 0 0 78px;
+	}
+	h4 {
+		margin: 0 0 10px 0;
+		font-size: 16px;
+	}
+	.comments {
+		color: lighten($text, 5);
+		font-size: 12px;
+		cursor: pointer;
+		text-decoration: underline;
+		&:hover {
+			color: $brand;
+		}
+	}
+	.comment {
+		margin: 30px 0 0 2px;
+		p {
+			color: lighten($text, 15);
+			margin: 0 0 10px 0;
+		}
+		.time {
+				color: lighten($text, 35);
+				font-size: 14px;
+		}
+	}
+	.add {
+			margin: 0 0 0 78px;
+	}
+	a {
+		text-decoration: none;
+		color: $text;
+		&:visited {
+			color: darken(desaturate($background, 55), 50);
+		}
+	}
+	.domain {
+		font-family: $title_font;
+		font-size: normal;
+		color: #616161;
+		font-size: 14px;
+	}
+	.tags {
+		margin: 5px 0 0 0;
+	}
+	.tag {
+		background-color: darken($white, 10);
+		padding: 2px 8px;
+		@include radius(8px);
+		font-size: 12px;
+		color: lighten($black, 50);
+		text-transform: lowercase;
+		cursor: pointer;
+		&:hover {
+			background-color: $brand;
+			color: $white;
+		}
+		
+	}	
+	p {
+		margin: 0;
+	}
+}
+
+
+footer {
+	background-color: $background;
+	padding: 10px 0;
+	a {
+		color: darken(desaturate($background, 30), 30);
+		font-size: 14px;
+		text-decoration: none;
+		&:hover {
+			color: darken(desaturate($background, 30), 50);
+		}
+	}
+	span {
+		color: darken(desaturate($background, 30), 8);
+		font-size: 18px;
+		float: left;
+		margin: 0 6px;
+		line-height: 16px;
+	}
+	ul {
+		list-style: none;
+		float: right;
+		li {
+			float: left;
+		}
+	}
+}
