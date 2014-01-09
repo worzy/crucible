@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head>  
+        <meta name="application-name" content="Crucible">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@if(!empty($meta['title'])){{ $meta['title'] }} | @endif Crucible</title>
         <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css" media="all and (min-width: 120px)">
