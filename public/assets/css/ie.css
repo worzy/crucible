@@ -192,17 +192,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
               border: 1px solid #752211;
               text-shadow: 2px 2px #752211; }
 
-@-webkit-keyframes slide-fade {
-  0% {
-    -webkit-transform: translate3d(0, -3px, 0);
-    -webkit-animation-timing-function: ease-in;
-    opacity: 0; }
-
-  100% {
-    -webkit-transform: translate3d(0, 0px, 0);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1; } }
-
 .main-content {
   z-index: -3;
   background: white;
@@ -221,8 +210,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     padding: 7px 10px;
     color: white;
     text-decoration: none; }
-  .main-content .fade {
-    -webkit-animation: slide-fade 0.4s; }
   .main-content p {
     margin: 0 0 10px 0; }
   .main-content .error {

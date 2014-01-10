@@ -12,6 +12,7 @@
 	cursor: pointer;
 	line-height: 24px;
 	text-align: center;
+	-webkit-appearance: none;
 	&:hover {
 		background: none repeat scroll 0 0 darken($brand, 15);
 		border: 1px solid darken($brand, 20);

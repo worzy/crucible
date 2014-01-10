@@ -33,9 +33,7 @@
     
         <div class="container">
                 <div class="main-content col8 pre2 suf2">
-                        <div class="fade">
                          @yield('content')
-                         </div> 
                 </div>
             
     

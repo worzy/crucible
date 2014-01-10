@@ -353,7 +353,8 @@ input:focus {
   text-decoration: none;
   cursor: pointer;
   line-height: 24px;
-  text-align: center; }
+  text-align: center;
+  -webkit-appearance: none; }
   .btn:hover {
     background: none repeat scroll 0 0 #a22f18;
     border: 1px solid #8b2915; }
