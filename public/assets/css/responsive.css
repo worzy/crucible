@@ -144,8 +144,14 @@
   background-color: #df4627;
   height: 68px; }
   .header .logo {
+    background: url(../img/logo.png) no-repeat;
+    background-image: url(../img/logo.svg), none;
+    background-position: 0 17px;
+    background-size: 25px 25px;
     width: 200px;
+    height: 50px;
     margin: 4px 0 0 0;
+    padding: 0 0 0 23px;
     float: left;
     text-decoration: none; }
   .header h1 {
@@ -189,6 +195,7 @@
 .main-content {
   z-index: -3;
   background: white;
+  padding: 20px 20px 35px;
   box-sizing: border-box;
   -o-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -212,6 +219,8 @@
     line-height: 6px;
     vertical-align: middle;
     color: #dc3f47; }
+  .main-content h2 {
+    margin: 10px 0 30px 0; }
   .main-content h3 {
     display: inline-block;
     margin: 10px 0 0 0;
@@ -537,8 +546,14 @@ footer {
     background-color: #df4627;
     height: 68px; }
     .header .logo {
+      background: url(../img/logo.png) no-repeat;
+      background-image: url(../img/logo.svg), none;
+      background-position: 0 17px;
+      background-size: 25px 25px;
       width: 200px;
+      height: 50px;
       margin: 4px 0 0 0;
+      padding: 0 0 0 23px;
       float: left;
       text-decoration: none; }
     .header h1 {
@@ -582,6 +597,7 @@ footer {
   .main-content {
     z-index: -3;
     background: white;
+    padding: 20px 20px 35px;
     box-sizing: border-box;
     -o-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -605,6 +621,8 @@ footer {
       line-height: 6px;
       vertical-align: middle;
       color: #dc3f47; }
+    .main-content h2 {
+      margin: 10px 0 30px 0; }
     .main-content h3 {
       display: inline-block;
       margin: 10px 0 0 0;
@@ -889,6 +907,8 @@ footer {
       padding: 7px 10px;
       color: white;
       text-decoration: none; }
+    .main-content h2 {
+      margin: 0px 0 30px 0; }
     .main-content .filter {
       min-width: 0;
       margin: -35px -20px 25px -20px;
@@ -1008,10 +1028,12 @@ footer {
     text-decoration: none; }
 
   .main-content {
-    padding: 35px 20px 20px 20px; }
+    padding: 35px 20px 40px 20px; }
     .main-content .filter {
       min-width: 0;
       margin: -35px -20px 25px -20px; }
+    .main-content h2 {
+      margin: 0px 0 30px 0; }
 
   .post {
     box-sizing: border-box;
@@ -1033,4 +1055,29 @@ footer {
       margin: 5px 0 30px 0; }
 
   footer ul {
-    padding: 0; } }
+    padding: 0; }
+
+  label {
+    margin: 0 0 12px 0; }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  .uneditable-input {
+    font-size: 14px;
+    height: 20px; }
+
+  .btn {
+    padding: 8px 14px 6px;
+    font-size: 18px; } }

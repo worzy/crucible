@@ -2,8 +2,14 @@
 	background-color: $brand;
 	height: 68px;
 	.logo {
+		background: url(../img/logo.png) no-repeat;
+		background-image: url(../img/logo.svg), none;
+		background-position: 0 17px;
+		background-size: 25px 25px;
 		width: 200px;
+		height: 50px;
 		margin: 4px 0 0 0;
+		padding: 0 0 0 23px;
 		float: left;
 		text-decoration: none;
 	}
@@ -11,7 +17,6 @@
 		color: $white;
 		font-size: 22px;
 		font-weight: normal;
-
 	}
 	.main-nav {
 		float: right;
@@ -55,6 +60,7 @@
 .main-content {
 	z-index: -3;
 	background: $white;
+	padding: 20px 20px 35px;
 	@include box-sizing();
 	.bookmarklet {
 		background-color: $brand;
@@ -73,7 +79,10 @@
 		line-height: 6px;
 		vertical-align: middle;
 		color: $error;
-		}
+	}
+	h2 {
+		margin: 10px 0 30px 0;
+	}
 	h3 {
 		display: inline-block;
 		margin: 10px 0 0 0;
