@@ -141,6 +141,9 @@ class PostController extends BaseController {
 
 		$post = $this->post->with(array('comments', 'comments.user'))->find($id);
 
+		// Number of clicks on this link
+		$click_count = $post->clicks->count();
+
 		$post->gravatar = $gravatar->getGravatar($post->User->email);
 
 		$url = parse_url($post->url);
@@ -154,7 +157,7 @@ class PostController extends BaseController {
 		// Set meta
 		$this->layout->meta = array('title' => $post->title, 'desc' => '');
 
-		$this->layout->content = View::make('post.show', array('post' => $post));
+		$this->layout->content = View::make('post.show', compact('post', 'click_count'));
 	}
 
 	/**

@@ -27,5 +27,10 @@ class Post extends BaseModel
     {
         return $this->belongsToMany('Tag');
     }
+
+    public function clicks()
+    {
+        return $this->hasMany('Click');
+    }
     
 }

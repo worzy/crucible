@@ -23,6 +23,8 @@ Route::get('logout', array('as' => 'user.logout', 'uses' => 'UserController@getL
 
 Route::get('tags/{title}', array('as' => 'posts.tags', 'uses' => 'PostController@tags'));
 
+Route::get('view/{post_id}', array('as' => 'post.view', 'uses' => 'ClickController@show'));
+
 Route::resource('post', 'PostController');
 Route::resource('comment', 'CommentController');
 

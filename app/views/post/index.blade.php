@@ -12,8 +12,8 @@
 			<img class="image" src="{{ $row->gravatar }}">
 		</div>
 		<div class="right">
-		    <a target="_blank" href="{{ $row->url }}"><h2>{{ $row->title }}</h2></a>
-		    <span class="domain"><a target="_blank" href="{{ $row->url }}">({{ $row->domain }})</a></span> 
+		    <a target="_blank" href="{{ URL::route('post.view', $row->id) }}"><h2>{{ $row->title }}</h2></a>
+		    <span class="domain"><a target="_blank" href="{{ URL::route('post.view', $post->id) }}">({{ $row->domain }})</a></span> 
 		       <span class="sub-text">Posted by {{ $row->User->first_name }} {{ substr ( $row->User->last_name , 0, 1 ) }} {{ $row->timeSince() }} - </span> <span class="comments"> {{HTML::linkRoute('post.show', count($row->comments).' comments', array($row->id))}}</span>
 		       <br>
 		       <p class="tags">@foreach($row->tags as $tag)

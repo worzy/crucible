@@ -4,9 +4,9 @@
 			<img class="image" src="{{ $post->gravatar }}">
 		</div>
 		<div class="right">
-		    <a target="_blank" href="{{ $post->url }}"><h1>{{ $post->title }}</h1></a>
-		    <p><span class="domain"><a target="_blank" href="{{ $post->url }}">({{ $post->domain }})</a></span> 
-		       <span class="sub-text">Posted by {{ $post->User->first_name }} {{ substr ( $post->User->last_name , 0, 1 ) }} {{ $post->timeSince() }}</span> 
+		    <a target="_blank" href="{{ URL::route('post.view', $post->id) }}"><h1>{{ $post->title }}</h1></a>
+		    <p><span class="domain"><a target="_blank" href="{{ URL::route('post.view', $post->id) }}">({{ $post->domain }})</a></span> 
+		       <span class="sub-text">Posted by {{ $post->User->first_name }} {{ substr ( $post->User->last_name , 0, 1 ) }} {{ $post->timeSince() }}</span> - Number of clicks {{ $click_count }}
 		       <br>
 		       <p class="tags">@foreach($post->tags as $tag)
 		       <a href="{{URL::route('posts.tags', array($tag->name))}}" class="tag">{{$tag->name}}</a>
