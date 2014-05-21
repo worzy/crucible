@@ -408,6 +408,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     color: #676767;
     margin: 0 0 10px 0; }
 
+.thermometer {
+  animation-name: temperature; }
+
 footer {
   background-color: #e2f3f4;
   padding: 10px 0; }

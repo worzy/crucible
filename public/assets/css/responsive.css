@@ -402,6 +402,9 @@
     color: #676767;
     margin: 0 0 10px 0; }
 
+.thermometer {
+  animation-name: temperature; }
+
 footer {
   background-color: #e2f3f4;
   padding: 10px 0; }
@@ -820,6 +823,9 @@ footer {
     .no-posts p {
       color: #676767;
       margin: 0 0 10px 0; }
+
+  .thermometer {
+    animation-name: temperature; }
 
   footer {
     background-color: #e2f3f4;

@@ -51,7 +51,7 @@
 				    	text-shadow: 2px 2px darken($brand, 25);
 				    	}
 				    }
-				}   
+				}
 			}
 		}
 	}
@@ -71,7 +71,7 @@
 		color: $white;
 		text-decoration: none;
 	}
-	p { 
+	p {
 		margin: 0 0 10px 0;
 	}
 	.error {
@@ -98,7 +98,7 @@
 	}
 	.filter {
 		margin: -20px 0 20px -20px;
-		min-width: 600px; 
+		min-width: 600px;
 		background-color: darken($white, 5);
 		padding: 0 20px 0 0;
 		h3 {
@@ -155,7 +155,7 @@
 				}
 				&:before {
 				content: none;
-				}	
+				}
 				a {
 					color: $brand;
 					text-decoration: none;
@@ -171,8 +171,8 @@
 			&:before {
 				content:'\2022';
 				vertical-align: middle;
-				margin: 0 8px 0 0;	
-      			color: $brand;	
+				margin: 0 8px 0 0;
+      			color: $brand;
       			font-size: 22px;
       		}
     	}
@@ -275,8 +275,8 @@
 			background-color: $brand;
 			color: $white;
 		}
-		
-	}	
+
+	}
 	p {
 		margin: 0;
 	}
@@ -297,6 +297,10 @@
 			margin: 0 0 10px 0;
 		}
 	}
+
+.thermometer {
+	animation-name: temperature;
+}
 
 footer {
 	background-color: $background;
