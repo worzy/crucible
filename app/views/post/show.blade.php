@@ -31,7 +31,12 @@
 		<div class="clear"></div>
 		@endforeach
 
-		
+		@if(!Sentry::check())
+		<div class="add">
+		<p>Log in or sign up to join the discussion.</p>
+		<a class="btn" href="/register">Sign up</a> <a class="btn" href="/login">Log in</a>
+		</div>
+		@else
 		{{ Form::open(array('url' => 'comment')) }}
 		<div class="add">
 		@foreach ($errors->all() as $error)
@@ -42,6 +47,7 @@
 		<input class="btn" type="submit" value="Add a comment">
 		</div>
 		{{ Form::close() }}
+		@endif
 	  	
 
 </div>

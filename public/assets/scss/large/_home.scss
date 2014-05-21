@@ -61,6 +61,7 @@
 	z-index: -3;
 	background: $white;
 	padding: 20px 20px 35px;
+	min-height: 80%;
 	@include box-sizing();
 	.bookmarklet {
 		background-color: $brand;
@@ -237,7 +238,14 @@
 		}
 	}
 	.add {
-			margin: 0 0 0 78px;
+		margin: 0 0 0 78px;
+		p {
+			margin: 20px 0 20px 0;
+		}
+		.btn {
+			margin: 0 5px 0 0;
+			color: $white;
+		}
 	}
 	a {
 		text-decoration: none;
@@ -272,8 +280,23 @@
 	p {
 		margin: 0;
 	}
+
 }
 
+.no-posts {
+	margin: 20px 0 0 0;
+		background: url(../img/sad-face.png) no-repeat;
+		background-image: url(../img/sad-face.svg), none;
+		background-position: center 0;
+		background-size: 80px 80px;
+		height: 200px;
+		padding: 100px 0 0 0;
+		text-align: center;
+		p {
+			color: lighten($text, 20);
+			margin: 0 0 10px 0;
+		}
+	}
 
 footer {
 	background-color: $background;

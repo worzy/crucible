@@ -16,6 +16,8 @@
 }
 
 .post {
+	padding: 20px 0 0 0;
+	border-bottom: solid 1px darken($white, 5);
 	@include box-sizing();
 	.right {
 		float: left;
@@ -27,7 +29,7 @@
 		@include radius(20px);
 	}
 	.tags {
-		margin: 5px 0 30px 0;
+		margin: 5px 0 20px 0;
 	}
 }
 

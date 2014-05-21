@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>  
+        <meta charset='UTF-8'>
         <meta name="application-name" content="Crucible">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>@if(!empty($meta['title'])){{ $meta['title'] }} | @endif Crucible</title>
