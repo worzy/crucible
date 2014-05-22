@@ -32,5 +32,28 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 12px;
 }
 
+@-webkit-keyframes rating {
+  0%   {
+  	background-image: url(../img/Thermometer-Zero.svg), none;
+		background-size: 25px 25px;
+	}
+  100% {
+  	background-image: url(../img/Thermometer-100.svg), none;
+		background-size: 25px 25px;
+	}
+}
+@-moz-keyframes rating {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes rating {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes rating {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 @import "forms";
 @import "buttons";
